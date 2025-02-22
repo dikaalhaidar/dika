@@ -1,259 +1,112 @@
-* {
+/* Mengatur gaya umum untuk body */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-body {
-    background-color: #f9f9f9;
-    color: #333;
-}
-
+/* Mengatur header dan navigasi */
 header {
-    background-color: #ac2298;
-    padding: 20px 0;
+    background-color: #00796b; /* Warna latar belakang header */
+    padding: 10px 20px; /* Padding di atas dan bawah serta kiri dan kanan */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Mengatur navbar untuk berada di sebelah kanan */
+.navbar {
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: flex-end; /* Menyusun navbar ke sisi kanan */
 }
 
-nav .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+.navbar ul {
+    list-style: none; /* Menghilangkan bullet pada daftar */
+    margin: 0; /* Menghilangkan margin pada <ul> */
+    padding: 0; /* Menghilangkan padding pada <ul> */
+    display: flex; /* Menampilkan item dalam satu baris */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+.navbar ul li {
+    margin-left: 20px; /* Memberikan jarak antar item */
 }
 
-nav ul li {
-    margin-left: 20px;
+.navbar ul li a {
+    color: white; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 18px; /* Ukuran font */
+    padding: 10px 15px; /* Padding di dalam link */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+.navbar ul li a:hover {
+    background-color: #004d40; /* Warna latar belakang saat hover */
+    border-radius: 5px; /* Sudut melengkung saat hover */
 }
-
-nav ul li a:hover {
-    color: #ff6347;
-}
-
-.about {
-    background-color: #ffffff;
-    padding: 80px 20px;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.profile-img {
-    border-radius: 34%;
-    width: 800px;
-    height: 300px;
-    object-fit: cover;
-    margin-right: 40px;
-}
-
-.about-text h2 {
-    font-size: 36px;
-    color: #ff6347;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.skills {
-    background-color: #e6f7ff;
-    padding: 60px 20px;
-}
-
-.skills h2 {
-    font-size: 36px;
-    color: #f35b41;
+h2{
     text-align: center;
-    margin-bottom: 40px;
+    color: #004d40;
+    margin-bottom: 10px; /* Memberikan jarak bawah untuk <h2> */
+    padding: 10px;
+    
+ 
 }
-
-.skills-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.skill-card {
-    background-color: white;
-    width: 30%;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card h3 {
-    font-size: 24px;
-    color: #f85656;
-    margin-bottom: 2px;
-}
-
-.progress-bar {
-    height: 10px;
-    border-radius: 5px;
-    background-color: #ddd;
-}
-
-.html {
-    width: 90%;
-    background-color: #cb442c;
-}
-
-.css {
-    width: 80%;
-    background-color: #13d4ed;
-}
-
-
-.certificates {
-    background-color: #e6f7ff;
-    padding: 60px 20px;
-}
-
-.certificates h2 {
-    font-size: 36px;
-    color: #ff6347;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.certificate-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.certificate-card {
-    background-color: white;
-    width: 50%;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 40px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.certificate-card img {
-    width: 99;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-.certificate-card p {
+p {
     font-size: 16px;
-    color: #666;
-}
-.contact {
-    background-color: #f5fffa;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 36px;
-    color: #ff6347;
-    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: justify;
+   cursor: pointer;
+   border: 6px solid #545252; 
+   padding: 10px; /* buat ruang di dalam border */
+   margin: 17px 0; /* buat ruang di luar border */
+   border-radius: 19px; /* biar sudut bulat */
+   animation: moveImage 2s ease-out forwards; 
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
+@keyframes moveImage {
+    1% {
+        transform: translateX(-200px); /* Posisi awal gambar di kiri */
+    }
+    100% {
+        transform: translateX(0); /* Gambar bergerak ke posisi normal */
+    }
+}
+.gambar1{
+    float: left;
+    margin-right: 12px; 
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    animation: moveImage 2s ease-out forwards; 
+}
+.container {
+    display: block; /* Elemen di dalam kontainer akan diatur secara vertikal */
+    border: 2px solid #333; /* Memberikan border kotak */
+    padding: 20px; /* Memberikan ruang di dalam kotak */
+    margin: 20px; /* Memberikan jarak di luar kotak */
+    width: 300px; /* Menentukan lebar kotak */
+    border:6px solid #545252; 
+    border-radius: 15px;
+    animation: moveDown 2s forwards;
+
+}
+.gambar2{
+    float: left;
+    margin-right: 90px; 
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px; 
+    animation: moveImage 2s ease-out forwards; 
+
+}
+@keyframes moveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Teks dimulai dari posisi lebih atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Teks bergerak ke posisi normal */
+    }
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-}
 
-form button {
-    background-color: #ff6347;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #ffa07a;
-}
-
-.social-links {
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #ff6347;
-}
-
-.social-links i {
-    margin-right: 8px;
-}
-
-footer {
-    background-color: #ac2298;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
+ 
